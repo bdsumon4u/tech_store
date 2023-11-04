@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/auth/screens/recovery_screen.dart';
 import 'package:t_store/features/auth/screens/register_screen.dart';
+import 'package:t_store/features/tabbar.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/constants/text.dart';
 
@@ -51,7 +52,7 @@ class HLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const HTabBar()),
                 child: const Text(HText.signIn),
               ),
             ),
