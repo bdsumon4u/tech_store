@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/auth/screens/register_screen.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/constants/text.dart';
 
@@ -56,7 +58,7 @@ class HLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const RegisterScreen()),
                 child: const Text(HText.createAccount),
               ),
             ),
