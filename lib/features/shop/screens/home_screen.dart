@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/containers/search_container.dart';
 import 'package:t_store/features/shop/screens/home/appbar.dart';
+import 'package:t_store/features/shop/screens/home/categories.dart';
 import 'package:t_store/utils/constants/size.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,6 +21,7 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(height: HSize.sectionSpace),
                   HSearchContainer(text: 'Search in Store'),
                   SizedBox(height: HSize.sectionSpace),
+                  HomeCategories(),
                 ],
               ),
             ),
