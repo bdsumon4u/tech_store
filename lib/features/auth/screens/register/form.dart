@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/auth/screens/register/checkbox.dart';
+import 'package:t_store/features/auth/screens/verify_screen.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/constants/text.dart';
 
@@ -66,7 +68,7 @@ class HSignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(() => const VerifyScreen()),
               child: const Text(HText.createAccount),
             ),
           ),
