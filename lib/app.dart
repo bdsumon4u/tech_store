@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:t_store/features/auth/screens/onboarding_screen.dart';
 import 'package:t_store/utils/constants/text.dart';
 import 'package:t_store/utils/themes/app_theme.dart';
 
@@ -15,9 +16,7 @@ class App extends StatelessWidget {
       darkTheme: HAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // initialBinding: GeneralBindings(),
-      home: const Scaffold(
-        body: Center(child: Text("Tech Store - a store for tech products.")),
-      ),
+      home: const OnBoardingScreen(),
     );
   }
 }
