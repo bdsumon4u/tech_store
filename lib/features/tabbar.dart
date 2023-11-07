@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/shop/screens/home_screen.dart';
+import 'package:t_store/features/shop/screens/store_screen.dart';
 import 'package:t_store/utils/helper.dart';
 
 class HTabBar extends StatelessWidget {
@@ -43,7 +44,7 @@ class TabBarController extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    const Center(child: Text('Store')),
+    const StoreScreen(),
     const Center(child: Text('Wishlist')),
     const Center(child: Text('Profile')),
   ];
