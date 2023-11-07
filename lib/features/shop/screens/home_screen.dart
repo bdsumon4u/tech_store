@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/containers/search_container.dart';
+import 'package:t_store/common/widgets/layouts/grid_layout.dart';
+import 'package:t_store/common/widgets/products/cards/vertical.dart';
+import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/appbar.dart';
 import 'package:t_store/features/shop/screens/home/categories.dart';
 import 'package:t_store/features/shop/widgets/slider.dart';
@@ -12,11 +15,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HPrimaryHeaderContainer(
+            const HPrimaryHeaderContainer(
               child: Column(
                 children: [
                   HomeAppBar(),
@@ -28,12 +31,24 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(HSize.defaultSpace),
-              child: HPromoSlider(
-                banners: [
-                  HImage.promoBanner1,
-                  HImage.promoBanner2,
-                  HImage.promoBanner3,
+              padding: const EdgeInsets.all(HSize.defaultSpace),
+              child: Column(
+                children: [
+                  const HPromoSlider(
+                    banners: [
+                      HImage.promoBanner1,
+                      HImage.promoBanner2,
+                      HImage.promoBanner3,
+                    ],
+                  ),
+                  const SizedBox(height: HSize.sectionSpace),
+                  HSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: HSize.itemSpace),
+                  HGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (context, index) =>
+                        const HProductCardVertical(),
+                  ),
                 ],
               ),
             ),
