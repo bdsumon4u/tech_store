@@ -14,31 +14,26 @@ class HPrimaryHeaderContainer extends StatelessWidget {
       child: Container(
         color: HColor.primary,
         padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-
-          /// -- If size.isFinite is not true in stack, it will throw an error
-          child: Stack(
-            children: [
-              Positioned(
-                top: -150,
-                right: -250,
-                child: HCircularContainer(
-                  backgroundColor: HColor.textWhite.withOpacity(0.1),
-                ),
+        child: Stack(
+          children: [
+            Positioned(
+              top: -150,
+              right: -250,
+              child: HCircularContainer(
+                backgroundColor: HColor.textWhite.withOpacity(0.1),
               ),
-              Positioned(
-                top: 100,
-                right: -350,
-                child: HCircularContainer(
-                  backgroundColor: HColor.textWhite.withOpacity(0.1),
-                ),
+            ),
+            Positioned(
+              top: 100,
+              right: -350,
+              child: HCircularContainer(
+                backgroundColor: HColor.textWhite.withOpacity(0.1),
               ),
+            ),
 
-              /// --
-              child,
-            ],
-          ),
+            /// --
+            child,
+          ],
         ),
       ),
     );

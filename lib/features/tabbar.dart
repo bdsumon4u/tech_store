@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/account/screens/settings_screen.dart';
 import 'package:t_store/features/shop/screens/home_screen.dart';
 import 'package:t_store/features/shop/screens/store_screen.dart';
 import 'package:t_store/features/shop/screens/wishlist_screen.dart';
@@ -47,6 +48,6 @@ class TabBarController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const WishlistScreen(),
-    const Center(child: Text('Profile')),
+    const SettingsScreen(),
   ];
 }
