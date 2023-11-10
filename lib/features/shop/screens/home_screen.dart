@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
                   HSearchContainer(text: 'Search in Store'),
                   SizedBox(height: HSize.sectionSpace),
                   HomeCategories(),
+                  SizedBox(height: HSize.sectionSpace),
                 ],
               ),
             ),
