@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/images/rounded_image.dart';
+import 'package:t_store/features/account/screens/profile_screen.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/image.dart';
 
@@ -25,10 +27,10 @@ class HProfileTile extends StatelessWidget {
       subtitle: Text(
         'store@hotash.tech',
         style:
-        Theme.of(context).textTheme.bodyMedium!.apply(color: HColor.white),
+            Theme.of(context).textTheme.bodyMedium!.apply(color: HColor.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: () => Get.to(() => const ProfileScreen()),
         icon: const Icon(Iconsax.edit, color: HColor.white),
       ),
     );
