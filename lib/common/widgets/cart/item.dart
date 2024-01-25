@@ -7,8 +7,8 @@ import 'package:t_store/utils/constants/image.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/helper.dart';
 
-class CartItem extends StatelessWidget {
-  const CartItem({super.key});
+class HCartItem extends StatelessWidget {
+  const HCartItem({super.key});
 
   @override
   Widget build(BuildContext context) {
