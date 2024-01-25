@@ -35,7 +35,6 @@ class HRoundedIcon extends StatelessWidget {
       child: IconButton(
         onPressed: onPressed,
         icon: Icon(icon, color: color, size: size),
-        color: backgroundColor,
       ),
     );
   }
