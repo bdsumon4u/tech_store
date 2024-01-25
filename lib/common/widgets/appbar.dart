@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/device.dart';
+import 'package:t_store/utils/helper.dart';
 
 class HAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HAppBar({
@@ -22,22 +24,27 @@ class HAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = HelperH.isDarkMode(context);
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: HSize.md),
       child: AppBar(
         automaticallyImplyLeading: false,
-        leading: _leadingButton(),
+        leading: _leadingButton(dark),
         title: title,
         actions: actions,
       ),
     );
   }
 
-  Widget? _leadingButton() {
+  Widget? _leadingButton(bool dark) {
     if (showBackArrow) {
       return IconButton(
         onPressed: () => Get.back(),
-        icon: Icon(leadingIcon ?? Iconsax.arrow_left),
+        icon: Icon(
+          leadingIcon ?? Iconsax.arrow_left,
+          color: dark ? HColor.white : HColor.dark,
+        ),
       );
     }
 

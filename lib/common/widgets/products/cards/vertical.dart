@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadow.dart';
 import 'package:t_store/common/widgets/containers/rounded_container.dart';
@@ -7,6 +8,7 @@ import 'package:t_store/common/widgets/images/rounded_image.dart';
 import 'package:t_store/common/widgets/text/brand_title_verified.dart';
 import 'package:t_store/common/widgets/text/product_price.dart';
 import 'package:t_store/common/widgets/text/product_title.dart';
+import 'package:t_store/features/shop/screens/product_screen.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/image.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -20,7 +22,7 @@ class HProductCardVertical extends StatelessWidget {
     final dark = HelperH.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

@@ -27,9 +27,10 @@ class HRoundedIcon extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(HSize.md),
-        color: HelperH.isDarkMode(context)
-            ? HColor.black.withOpacity(0.9)
-            : HColor.white.withOpacity(0.9),
+        color: backgroundColor ??
+            (HelperH.isDarkMode(context)
+                ? HColor.black.withOpacity(0.9)
+                : HColor.white.withOpacity(0.9)),
       ),
       child: IconButton(
         onPressed: onPressed,
