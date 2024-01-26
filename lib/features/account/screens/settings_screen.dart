@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar.dart';
 import 'package:t_store/common/widgets/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/profile_tile.dart';
 import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/features/account/widgets/tiles/settings_menu.dart';
+import 'package:t_store/features/shop/screens/order_screen.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/size.dart';
 
@@ -53,10 +55,11 @@ class SettingsScreen extends StatelessWidget {
                     title: 'Cart',
                     subTitle: 'Add, remove products and move to checkout',
                   ),
-                  const HSettingsMenuTile(
+                  HSettingsMenuTile(
                     icon: Iconsax.bag_tick,
                     title: 'Orders',
                     subTitle: 'In-progress and Completed orders',
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   const HSettingsMenuTile(
                     icon: Iconsax.bank,
