@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/common/widgets/vertical_image_text.dart';
+import 'package:t_store/features/shop/screens/category_screen.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/image.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -26,9 +28,10 @@ class HomeCategories extends StatelessWidget {
               itemCount: 6,
               scrollDirection: Axis.horizontal,
               itemBuilder: (_, item) {
-                return const HVerticalImageText(
+                return HVerticalImageText(
                   image: HImage.sportIcon,
                   title: 'Sport',
+                  onTap: () => Get.to(() => const CategoryScreen()),
                 );
               },
             ),

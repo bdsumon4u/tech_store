@@ -8,7 +8,7 @@ class HProductTitle extends StatelessWidget {
     required this.title,
     this.maxLines = 2,
     this.size = TextSize.small,
-    this.align = TextAlign.center,
+    this.align = TextAlign.left,
   });
 
   final String title;
