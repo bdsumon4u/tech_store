@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appbar.dart';
 import 'package:t_store/common/widgets/brands/card.dart';
 import 'package:t_store/common/widgets/cart/counter.dart';
@@ -6,6 +7,7 @@ import 'package:t_store/common/widgets/containers/search_container.dart';
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/common/widgets/tabbar.dart';
+import 'package:t_store/features/shop/screens/brands_screen.dart';
 import 'package:t_store/features/shop/screens/store/category_tab.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -60,7 +62,10 @@ class StoreScreen extends StatelessWidget {
                       padding: EdgeInsets.zero,
                     ),
                     const SizedBox(height: HSize.sectionSpace),
-                    HSectionHeading(title: 'Featured Brands', onPressed: () {}),
+                    HSectionHeading(
+                      title: 'Featured Brands',
+                      onPressed: () => Get.to(() => const BrandsScreen()),
+                    ),
                     const SizedBox(height: HSize.itemSpace / 1.5),
                     HGridLayout(
                       itemCount: 4,
