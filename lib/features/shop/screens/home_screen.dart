@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:t_store/common/widgets/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/containers/search_container.dart';
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
@@ -6,6 +7,7 @@ import 'package:t_store/common/widgets/products/cards/vertical.dart';
 import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/appbar.dart';
 import 'package:t_store/features/shop/screens/home/categories.dart';
+import 'package:t_store/features/shop/screens/products_screen.dart';
 import 'package:t_store/features/shop/widgets/slider.dart';
 import 'package:t_store/utils/constants/image.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -43,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: HSize.sectionSpace),
-                  HSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  HSectionHeading(title: 'Popular Products', onPressed: () => Get.to(() => const ProductsScreen())),
                   const SizedBox(height: HSize.itemSpace),
                   HGridLayout(
                     itemCount: 4,
