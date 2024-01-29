@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "177428102622",
+    "project_id": "oninda-89900",
+    "storage_bucket": "oninda-89900.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177428102622:android:ade953881819799514f14f",
+        "android_client_info": {
+          "package_name": "tech.hotash.store.t_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177428102622-p7jh3ok8fameeqk9a038ha996ji48aqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.hotash.store.t_store",
+            "certificate_hash": "927f2648f24de932fb479b6de008b7fd1163e119"
+          }
+        },
+        {
+          "client_id": "177428102622-s9t45q38p4r0cs8kl8scbts0neqsitn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsyzLIxDyQ9qgiMwiP_0tp0UoaFx7zt7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177428102622-s9t45q38p4r0cs8kl8scbts0neqsitn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "177428102622-k9h892e6hhkoi6k9vv5v1gjrqtt82che.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tech.hotash.store.tStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

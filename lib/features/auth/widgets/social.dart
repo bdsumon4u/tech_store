@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:t_store/features/auth/controllers/auth_controller.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/image.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -10,6 +12,7 @@ class HSocial extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = HelperH.isDarkMode(context);
+    final controller = Get.put(AuthController());
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -24,7 +27,7 @@ class HSocial extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => controller.googleSignIn(),
             icon: const Image(
               width: HSize.iconMd,
               height: HSize.iconMd,
@@ -44,7 +47,7 @@ class HSocial extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => controller.googleSignIn(),
             icon: const Image(
               width: HSize.iconMd,
               height: HSize.iconMd,

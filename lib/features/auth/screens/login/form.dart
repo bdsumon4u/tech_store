@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/auth/controllers/auth_controller.dart';
 import 'package:t_store/features/auth/screens/recovery_screen.dart';
 import 'package:t_store/features/auth/screens/register_screen.dart';
-import 'package:t_store/features/tabbar.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/constants/text.dart';
 
@@ -12,6 +12,8 @@ class HLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(AuthController());
+
     return Form(
       child: Padding(
         padding:
@@ -52,7 +54,7 @@ class HLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const HTabBar()),
+                onPressed: () => controller.googleSignIn(),
                 child: const Text(HText.signIn),
               ),
             ),

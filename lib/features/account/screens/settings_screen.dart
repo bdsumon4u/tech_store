@@ -6,6 +6,7 @@ import 'package:t_store/common/widgets/containers/primary_header_container.dart'
 import 'package:t_store/common/widgets/profile_tile.dart';
 import 'package:t_store/common/widgets/sections/section_heading.dart';
 import 'package:t_store/features/account/widgets/tiles/settings_menu.dart';
+import 'package:t_store/features/auth/controllers/auth_controller.dart';
 import 'package:t_store/features/shop/screens/order_screen.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/size.dart';
@@ -15,6 +16,8 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(AuthController());
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -114,7 +117,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () => controller.signOut(),
                       child: const Text('Logout'),
                     ),
                   ),
