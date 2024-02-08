@@ -69,10 +69,12 @@ class HProductCardVertical extends StatelessWidget {
                     top: 0,
                     right: 0,
                     child: HRoundedIcon(
+                      // width: HSize.lg,
+                      // height: HSize.lg,
                       size: HSize.lg,
                       icon: Iconsax.heart5,
                       color: Colors.red,
-                      backgroundColor: dark ? HColor.white : HColor.black,
+                      backgroundColor: dark ? HColor.white : Colors.transparent,
                     ),
                   ),
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/common/widgets/images/rounded_image.dart';
 import 'package:t_store/utils/constants/color.dart';
 import 'package:t_store/utils/constants/size.dart';
 import 'package:t_store/utils/helper.dart';
@@ -10,12 +11,14 @@ class HVerticalImageText extends StatelessWidget {
     required this.title,
     this.textColor = HColor.white,
     this.backgroundColor = HColor.white,
+    this.isNetworkImage = true,
     this.onTap,
   });
 
   final String image, title;
   final Color textColor;
   final Color? backgroundColor;
+  final bool isNetworkImage;
   final VoidCallback? onTap;
 
   @override
@@ -28,21 +31,13 @@ class HVerticalImageText extends StatelessWidget {
         padding: const EdgeInsets.only(right: HSize.itemSpace),
         child: Column(
           children: [
-            Container(
-              width: 56,
+            HRoundedImage(
               height: 56,
-              padding: const EdgeInsets.all(HSize.sm),
-              decoration: BoxDecoration(
-                color: backgroundColor ?? (dark ? HColor.black : HColor.white),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Center(
-                child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover,
-                  color: dark ? HColor.light : HColor.dark,
-                ),
-              ),
+              width: 56,
+              image: image,
+              fit: BoxFit.fitWidth,
+              isNetworkImage: isNetworkImage,
+              backgroundColor: backgroundColor,
             ),
             const SizedBox(height: HSize.itemSpace / 2),
             SizedBox(

@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -48,6 +42,15 @@ class DefaultFirebaseOptions {
         );
     }
   }
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyB-pj5kY_GvomjTH6TIUpJzPh8UlX62FvU',
+    appId: '1:177428102622:web:a4114d7c1be9b42b14f14f',
+    messagingSenderId: '177428102622',
+    projectId: 'oninda-89900',
+    authDomain: 'oninda-89900.firebaseapp.com',
+    storageBucket: 'oninda-89900.appspot.com',
+  );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDsyzLIxDyQ9qgiMwiP_0tp0UoaFx7zt7g',
@@ -66,5 +69,16 @@ class DefaultFirebaseOptions {
     androidClientId: '177428102622-p7jh3ok8fameeqk9a038ha996ji48aqm.apps.googleusercontent.com',
     iosClientId: '177428102622-k9h892e6hhkoi6k9vv5v1gjrqtt82che.apps.googleusercontent.com',
     iosBundleId: 'tech.hotash.store.tStore',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAkS9Z2A29t3DuqS2wf8eRo_FkFyf3jtvs',
+    appId: '1:177428102622:ios:fc1334722408795114f14f',
+    messagingSenderId: '177428102622',
+    projectId: 'oninda-89900',
+    storageBucket: 'oninda-89900.appspot.com',
+    androidClientId: '177428102622-p7jh3ok8fameeqk9a038ha996ji48aqm.apps.googleusercontent.com',
+    iosClientId: '177428102622-ar117hrda1cghon32vjbjlkhkou6k0al.apps.googleusercontent.com',
+    iosBundleId: 'tech.hotash.store.tStore.RunnerTests',
   );
 }
